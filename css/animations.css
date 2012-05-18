@@ -1,0 +1,42 @@
+@-webkit-keyframes dropIn {
+	0%, 50% { background-color: rgba(255,255,255, 0.2); }
+	50% 	{ background-color: rgba(255,255,255, 0.6); }
+}
+@-moz-keyframes dropIn {
+	0%, 50% { background-color: rgba(255,255,255, 0.2); }
+	50% 	{ background-color: rgba(255,255,255, 0.6); }
+}
+@keyframes dropIn {
+	0%, 50% { background-color: rgba(255,255,255, 0.2); }
+	50% 	{ background-color: rgba(255,255,255, 0.6); }
+}
+
+
+@-webkit-keyframes rotation {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotation {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes rotation {
+	0% {-ms-transform: rotate(0deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+@keyframes rotation {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes scale {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.8);}
+}
+
+#grid .cellDrop {
+	-webkit-animation: dropIn 2s 1, scale 1s 1;;
+	-moz-animation: dropIn 2s 1;
+	-ms-animation: dropIn 2s 1;
+	animation: dropIn 2s 1;
+}
