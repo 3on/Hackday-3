@@ -29,11 +29,6 @@ function squaredSized(width, height) {
   return {sWidth: w, sHeight: h, sx: 0, sy: 0};
 }
 
-function resize (urlData, canvas) {
-	
-}
-
-
 function addPic (file, i) {
 	var reader = new FileReader();
 
@@ -49,6 +44,9 @@ function addPic (file, i) {
 		image.onload = function() {
 			var dim = squaredSized(image.width, image.height);
 			ctx.drawImage(image, dim.sx, dim.sy, dim.sWidth, dim.sHeight, 0, 0, 160, 160);
+
+			window.pics.push({id: i,  data: canvas.toDataURL()});
+			//delete imgage;
 		};
 
 		image.src = urlData;
@@ -68,13 +66,18 @@ function bindings () {
 			
 			var file = e.dataTransfer.files[e.dataTransfer.files.length - 1];
 			addPic(file, i);
-
-			console.log(file);
 		};
 
 		this.ondragenter = function(e){
 			anim(this, 'cellDragEnter')
 		}
+	});
+}
+
+function redraw() {
+	pics.forEach(function(e){
+		$($("#grid .cell")[e.id]).empty();
+		templating("#tmpl-read", {urlData: e.data}, $("#grid .cell")[e.id]);
 	});
 }
 
@@ -90,6 +93,10 @@ require(['dotcloud'], function(dotcloud){
 
 		pics.observe(function(type, change){
 			console.log("change of type: " + type + " with ", change);
+
+			if(type == "synchronized") {
+				redraw();
+			}
 		});
 	});
 });

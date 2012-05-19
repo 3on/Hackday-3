@@ -27,14 +27,14 @@ body {
 	display: inline-block;
 	vertical-align: middle;
 
-	width: 480px;
-	height: 480px;
+	width: 492px;
+	height: 492px;
 	margin: 0px;
 	padding: 0px;
 }
 
 #grid .cell {
-	margin: 0px;
+	margin: 2px;
 	padding: 0px;
 	background-color: rgba(255,255,255, 0.2);
 	border: 0px solid;
