@@ -1,5 +1,5 @@
 @-webkit-keyframes dropIn {
-	0%, 50% { background-color: rgba(255,255,255, 0.2); }
+	
 	50% 	{ background-color: rgba(255,255,255, 0.6); }
 }
 @-moz-keyframes dropIn {
@@ -33,10 +33,29 @@
 	0%, 100% {-webkit-transform: scale(1);}
 	50% {-webkit-transform: scale(0.8);}
 }
+@-moz-keyframes scale {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.8);}
+}
+@-ms-keyframes scale {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.8);}
+}
+@keyframes scale {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.8);}
+}
 
 #grid .cellDrop {
-	-webkit-animation: dropIn 2s 1, scale 1s 1;;
-	-moz-animation: dropIn 2s 1;
-	-ms-animation: dropIn 2s 1;
-	animation: dropIn 2s 1;
+	-webkit-animation: dropIn 1s 1, scale 1s 1;
+	-moz-animation: dropIn 1s 1, scale 1s 1;
+	-ms-animation: dropIn 1s 1, scale 1s 1;
+	animation: dropIn 1s 1, scale 1s 1;
+}
+
+#grid .cellDragEnter {
+	-webkit-animation: dropIn 0.5s 1;
+	-moz-animation: dropIn 0.5s 1;
+	-ms-animation: dropIn 0.5s 1;
+	animation: dropIn 0.5s 1;
 }

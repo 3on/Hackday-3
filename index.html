@@ -6,6 +6,8 @@
   <script type='text/javascript' src='/js/underscore-min.js'></script>
   <script type='text/javascript' src='/js/jquery-1.7.2.min.js'></script>
  
+  <script type="text/javascript" src="http://api.jslib.dotcloud.com/dev/js/RMfhY3dGABotjHesGvImEjgIeNTWqsQHNkuenvTHAPCgAVrkDECaHUl0DS9coEoDk7kfwm5n9J4Q5dvxVTLggoLtBvcZaCJwGcpP31AZjRTu2G5ix6Ym2CUvii0lGHo4cujFgzYkfFBh3djE5LmP4b19l3CRqHRL37YeV7m2CgwhZXqpsRkHuLXlh2UujkJkqI1ZUefZV5t42WdJLiEWBP2T5HSmkUZMwXyw2iMQpSMWUlfIvmnwmEvn8PThGnWP"></script>
+
   <script type="text/javascript" src="/js/main.js"></script>
 
   <link rel="stylesheet" type="text/css" href="/css/animations.css">
@@ -13,12 +15,16 @@
 
 </head>
 <body>
-  <script type="text/template" id="tpml-small">
+  <script type="text/template" id="tmpl-read">
     <div class="small">
-      <!--<img src="<%=urlData%>" width="100px" height="100px" alt="@" />-->
-      <canvas width="100px" height="100px" id="<%=canvasId%>"></canvas>
+      <img src="<%=urlData%>" class="thumb" alt="@" />
     </div>
   </script>
+
+  <script type="text/template" id="tmpl-write">
+    <canvas width="160" height="160" class="thumb"></canvas>
+  </script>
+
 
   <div id="content">
     <div id="grid">

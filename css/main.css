@@ -27,8 +27,8 @@ body {
 	display: inline-block;
 	vertical-align: middle;
 
-	width: 500px;
-	height: 500px;
+	width: 480px;
+	height: 480px;
 	margin: 0px;
 	padding: 0px;
 }
@@ -37,8 +37,17 @@ body {
 	margin: 0px;
 	padding: 0px;
 	background-color: rgba(255,255,255, 0.2);
-	height: 32%;
-	width: 32%;
+	border: 0px solid;
+	height: 160px;
+	width: 160px;
 
-	display: inline-block;
+	position: relative;
+	float:left;
+}
+
+#grid .thumb {
+	margin: 0px;
+	padding: 0px;
+	width: 160px;
+	height: 160px;
 }
