@@ -46,11 +46,38 @@
 	50% {-webkit-transform: scale(0.8);}
 }
 
+
+
+@-webkit-keyframes scaleOver {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.94);}
+}
+@-moz-keyframes scaleOver {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.94);}
+}
+@-ms-keyframes scaleOver {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.94);}
+}
+@keyframes scaleOver {
+	0%, 100% {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(0.94);}
+}
+
+
 #grid .cellDrop {
 	-webkit-animation: dropIn 1s 1, scale 1s 1;
 	-moz-animation: dropIn 1s 1, scale 1s 1;
 	-ms-animation: dropIn 1s 1, scale 1s 1;
 	animation: dropIn 1s 1, scale 1s 1;
+}
+
+#grid .cell:hover {
+	-webkit-animation: scaleOver 1s 1;
+	-moz-animation: scaleOver 1s 1;
+	-ms-animation: scaleOver 1s 1;
+	animation: scaleOver 1s 1;
 }
 
 #grid .cellDragEnter {
